@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Giphy Party!</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Bodoni Moda', serif;
+      font-weight: 400;
+    }
+
+    body {
+      width: 95%;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input, button {
+      width: 12.5%;
+    }
+
+    form {
+      text-align: center;
+      margin: 0 auto 4%;
+    }
+
+    .giphy {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(auto, 100%));
+      grid-template-rows: repeat(4, minmax(1fr, auto));
+      grid-column-gap: 0px;
+      grid-row-gap: 15px;
+    }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400&display=swap"
+  rel="stylesheet">
+</head>
+
+<body>
+
+  <h1>GIPHY PARTY</h1>
+
+  <form action='#' method='GET'>
+    <input class="term" name='q'>
+    <button class="search" type="submit">Search Giphy!</button>
+    <button class="removeButton" type="button">Delele All</button>
+  </form>
+
+  <div class="giphy"></div>
+
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
